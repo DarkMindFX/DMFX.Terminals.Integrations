@@ -1,0 +1,12 @@
+LIBRARY DarkMindConnect
+EXPORTS
+	DMFXAccountsInitSession
+	DMFXAccountsCloseSession
+	DMFXTimeseriesGetTickerList
+	DMFXTimeseriesGetTimeSeriesInfo
+	DMFXTimeseriesGetTimeSeries
+	GetTimeSeriesCount
+	GetTimeSeriesDatesCount
+	GetTimeSeriesName
+	GetTimeSeriesValues
+	GetLastErrorMessage

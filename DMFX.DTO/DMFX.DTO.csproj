@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68D9BA7F-F191-409E-B538-004598734B69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMFX.DTO</RootNamespace>
+    <AssemblyName>DMFX.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ServiceStack.Common, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.3.9.11\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\CloseSession.cs" />
+    <Compile Include="DTO\Error.cs" />
+    <Compile Include="DTO\ErrorCodes.cs" />
+    <Compile Include="DTO\FilingRecord.cs" />
+    <Compile Include="DTO\GetCommonSizeBalanceSheet.cs" />
+    <Compile Include="DTO\GetCommonSizeIncomeStatement.cs" />
+    <Compile Include="DTO\GetCompanies.cs" />
+    <Compile Include="DTO\GetCompanyFilingsInfo.cs" />
+    <Compile Include="DTO\GetFilingData.cs" />
+    <Compile Include="DTO\GetFilingRatios.cs" />
+    <Compile Include="DTO\GetRegulators.cs" />
+    <Compile Include="DTO\GetTickerList.cs" />
+    <Compile Include="DTO\GetTimeSeries.cs" />
+    <Compile Include="DTO\GetTimeSeriesInfo.cs" />
+    <Compile Include="DTO\InitSession.cs" />
+    <Compile Include="DTO\RequestBase.cs" />
+    <Compile Include="DTO\ResponseBase.cs" />
+    <Compile Include="DTO\TickerInfo.cs" />
+    <Compile Include="DTO\TickerQuotes.cs" />
+    <Compile Include="DTO\TimeSeriesEnums.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>rem Common Classes &amp; Files
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\DMFX.Common.Interfaces\Error.cs" "$(ProjectDir)DTO\"
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\DMFX.Common.Interfaces\ErrorCodes.cs" "$(ProjectDir)DTO\"
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\Services\DMFX.Service.DTO\RequestBase.cs" "$(ProjectDir)DTO\"
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\Services\DMFX.Service.DTO\ResponseBase.cs" "$(ProjectDir)DTO\"
+rem Accounts
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\Services\DMFX.Service.DTO\Accounts\InitSession.cs" "$(ProjectDir)DTO\"
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\Services\DMFX.Service.DTO\Accounts\CloseSession.cs" "$(ProjectDir)DTO\"
+rem Filings
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\Services\DMFX.Service.DTO\Filings\*.cs" "$(ProjectDir)DTO\"
+rem TimeSeries
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\DMFX.QuotesInterfaces\TimeSeriesEnums.cs" "$(ProjectDir)DTO\"
+xcopy /s /y "$(ProjectDir)..\..\DarkMindFX.Filings\Services\DMFX.Service.DTO\TimeSeries\*.cs" "$(ProjectDir)DTO\"</PreBuildEvent>
+  </PropertyGroup>
+</Project>
