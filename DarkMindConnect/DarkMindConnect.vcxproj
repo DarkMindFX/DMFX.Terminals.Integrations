@@ -88,10 +88,7 @@ xcopy /y $(TargetDir)*.dll $(TargetDir)..\..\Tests\DMFX.Test.DarkMindConnect\Deb
       <AdditionalLibraryDirectories>c:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y $(OutDir)DarkMindConnect.dll "C:\Users\zr_co\AppData\Roaming\MetaQuotes\Terminal\BB190E062770E27C3E79391AB0D1A117\MQL4\Indicators\DarkMindFx"
-xcopy /y $(OutDir)*.dll "C:\Program Files (x86)\FXCM MetaTrader 4"
-xcopy /y $(OutDir)*.dll "..\DSHostAPI\Templates\MetaTrader4\Indicators\DarkMindFx"
-del /f /q "C:\Program Files (x86)\FXCM MetaTrader 4\DarkMindConnect.dll"</Command>
+      <Command>xcopy /y $(TargetDir)DarkMindConnect.dll "C:\Users\zr_co\AppData\Roaming\MetaQuotes\Terminal\1FC724C8C211BFE8ECF8B599A855301E\MQL4\Indicators\DarkMindFx\DarkMindConnect.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -1,0 +1,21 @@
+End User License Agreement - Terms Of User
+Before using DarkMindFx indicators packages on any platform you must accept the license agreement as a part of the setup process. The license is as follows, and should be perused.
+
+License
+
+DarkMindFx provides a free for use package of the indicators ("Package"), it can be use in any environment including (but not limited to) personal, academic, commercial, government, business, non-profit, and for-profit. "Free" in the preceding sentence means that there is no cost or charge associated with the installation and use of the Package. Donations are always appreciated. 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Package, to use the Package without restriction, including the rights to use, copy, publish, and distribute the Package, and to permit persons to whom the Package is furnished to do so. 
+
+You may not modify, adapt, rent, lease, loan or sell the Package, however you can create derivative works based upon the Package or any part thereof. 
+
+DarkMindFx reseves the rights to change, suspend or cancel the services, content of the indicators packages or the pricing model at any time without prior notice. 
+
+THE DATA OBRAINED THRU THE INDICATORS PACKAGES AND WITH DARKMINDFX SERVICES ARE FOR THE INFORMATION PURPOSES ONLY. DARKMINDFX DOESN'T HOLD ANY RESPONSIBILITY IN CASE OF FINANCIAL LOSSES, MATERIAL, REPUTATIONAL OR ANY OTHER KIND OF DAMAGES. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE PACKAGES, SERVICES OR THE USE OR OTHER DEALINGS. 
+
+3rd Parties 
+The website displays links to other websites and content, information and data obtained from other websites. You agree that we are not responsible or liable for any actions or inactions of other websites. You understand that we may use third-party vendors to provide necessary hardware, software, networking, storage, and related technology to run the web service and make the Package operatable. You agree and acknowledge that we are not responsible in any manner whatsoever for any actions or inactions of such third-parties. 
+
+Intellectual Property 
+All information and data provided as well as trademarks, service marks, trade names or any other marks are the property of the corresponding agencies. 
+Using the web site or Package does not give you ownership or license of any intellectual property rights in the Website or in any content, information or data accessed on or through the website or Package, including content, information and data obtained from a third-party website. It is your responsibility to comply with any copyright laws that govern the content, information or data accessed on or through the Package. Neither these Terms nor your use of the website or Package grant you any right to use any trademark or service-mark accessed on or through the Package. By using the package of the website, you agree that we can store the query in log files, and use it to generate the results given back to you. You also agree that we may use your queries to evaluate and enhance performance of the Package or web service and to study and analyze the usage patterns.

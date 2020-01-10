@@ -9,12 +9,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DarkMindConnect", "DarkMind
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MT4Indicators", "MT4Indicators", "{606A5D61-4E97-4538-9C06-39C52023C816}"
 	ProjectSection(SolutionItems) = preProject
+		MT4Indicators\brain_256.ico = MT4Indicators\brain_256.ico
 		MT4Indicators\DMIndicator.mqh = MT4Indicators\DMIndicator.mqh
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "COT", "COT", "{CFC97069-444B-4625-A53F-96E193EBF583}"
 	ProjectSection(SolutionItems) = preProject
+		MT4Indicators\COT\COTCmdtsFutNetPositions.mq4 = MT4Indicators\COT\COTCmdtsFutNetPositions.mq4
+		MT4Indicators\COT\COTCmdtsFutOptNetPositions.mq4 = MT4Indicators\COT\COTCmdtsFutOptNetPositions.mq4
 		MT4Indicators\COT\COTFinFutNetPositions.mq4 = MT4Indicators\COT\COTFinFutNetPositions.mq4
+		MT4Indicators\COT\COTFinFutOptNetPositions.mq4 = MT4Indicators\COT\COTFinFutOptNetPositions.mq4
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8F5B09CA-21E3-48E9-A8F3-72539ED73C14}"
@@ -28,6 +32,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceStack", "ServiceStac
 		ServiceStack\ServiceStack.Common.dll = ServiceStack\ServiceStack.Common.dll
 		ServiceStack\ServiceStack.Interfaces.dll = ServiceStack\ServiceStack.Interfaces.dll
 		ServiceStack\ServiceStack.Text.dll = ServiceStack\ServiceStack.Text.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setups", "Setups", "{ACE94EED-B25B-4DAA-9683-8CBB040D3894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMFX.MT4Setup", "Setups\DMFX.MT4Setup\DMFX.MT4Setup.csproj", "{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68D9BA7F-F191-409E-B538-004598734B69} = {68D9BA7F-F191-409E-B538-004598734B69}
+		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0} = {F324CECC-6883-4E0B-A900-6AE29A7D2EA0}
 	EndProjectSection
 EndProject
 Global
@@ -58,6 +70,7 @@ Global
 		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0}.Debug|x86.ActiveCfg = Debug|Win32
 		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0}.Debug|x86.Build.0 = Debug|Win32
 		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0}.Release|Any CPU.ActiveCfg = Release|Win32
+		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0}.Release|Any CPU.Build.0 = Release|Win32
 		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0}.Release|x64.ActiveCfg = Release|Win32
 		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0}.Release|x86.ActiveCfg = Release|Win32
 		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0}.Release|x86.Build.0 = Release|Win32
@@ -81,6 +94,18 @@ Global
 		{87F28A99-0A8C-49FB-93A1-819D36655A7B}.Release|x64.Build.0 = Release|x64
 		{87F28A99-0A8C-49FB-93A1-819D36655A7B}.Release|x86.ActiveCfg = Release|Win32
 		{87F28A99-0A8C-49FB-93A1-819D36655A7B}.Release|x86.Build.0 = Release|Win32
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Debug|x64.Build.0 = Debug|Any CPU
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Debug|x86.ActiveCfg = Debug|x86
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Debug|x86.Build.0 = Debug|x86
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|x64.ActiveCfg = Release|Any CPU
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|x64.Build.0 = Release|Any CPU
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|x86.ActiveCfg = Release|x86
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +114,7 @@ Global
 		{CFC97069-444B-4625-A53F-96E193EBF583} = {606A5D61-4E97-4538-9C06-39C52023C816}
 		{32E3D143-9941-4301-9C34-0F5E3165409D} = {8F5B09CA-21E3-48E9-A8F3-72539ED73C14}
 		{87F28A99-0A8C-49FB-93A1-819D36655A7B} = {8F5B09CA-21E3-48E9-A8F3-72539ED73C14}
+		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF} = {ACE94EED-B25B-4DAA-9683-8CBB040D3894}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20DCED67-B629-45CA-8881-D90DB8492DB6}
