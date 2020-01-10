@@ -218,13 +218,15 @@ MT4ACCESS int DMFXTimeseriesGetTimeSeries(MqlString country, MqlString ticker, i
 		req->CountryCode = ToManagedString(country);
 		req->Ticker = sTicker;
 		req->TimeFrame = (DMFX::QuotesInterfaces::ETimeFrame)timeframe;
+		req->PeriodStart = periodStart > 0 ? DateTime::Parse("01/01/1970") + TimeSpan::FromSeconds(periodStart) : DateTime::Parse("01/01/1970");
+		req->PeriodEnd = periodEnd > 0 ? DateTime::Parse("01/01/1970") + TimeSpan::FromSeconds(periodEnd) : DateTime::Now;
 
 		DTO::GetTimeSeriesResponse^ resp = Post<DTO::GetTimeSeriesResponse>("/api/timeseries/GetTimeSeries", req);
 		if (resp->Success)
 		{
 			// creating new records if needed
 			IndicatorData^ indData = nullptr;
-			if (!Globals::Indicators->TryGetValue(sTicker, indData))
+			if (Globals::Indicators->TryGetValue(sTicker, indData))
 			{
 				for (int i = 0; i < resp->Payload->Values->Quotes->Count; ++i)
 				{
@@ -296,12 +298,55 @@ MT4ACCESS int GetTimeSeriesDatesCount(MqlString ticker, MqlString tsName)
 // returns name of the time series with the given index
 MT4ACCESS MqlString GetTimeSeriesName(MqlString ticker, int index)
 {
+	String^ sTicker = ToManagedString(ticker);
+	IndicatorData^ indData = nullptr;
+	if (Globals::Indicators->TryGetValue(sTicker, indData))
+	{
+		return ToMqlString(indData->SeriesNames[index]);
+	}
+
 	return 0;
 }
 
 // returns single time series with the given index
 MT4ACCESS int GetTimeSeriesValues(MqlString ticker, int index, int* dates, double* values)
 {
+	try
+	{
+		DateTime dtStart(1970, 1, 1);
+
+		String^ sTicker = ToManagedString(ticker);
+		IndicatorData^ indData = nullptr;
+		if (Globals::Indicators->TryGetValue(sTicker, indData))
+		{
+			String^ sName = indData->SeriesNames[index];
+
+			IndicatorSeriesData^ indSeriesData = indData->Series[sName];
+
+			int i = 0;
+			for each (DateTime dt in indSeriesData->Values->Keys)
+			{
+				dates[i] = (dt - dtStart).TotalSeconds;
+				values[i] = double(indSeriesData->Values[dt]);
+				++i;
+			}
+
+		}
+		else
+		{
+			return (int)EErrorCodes::QuotesNotFound;
+		}
+	}
+	catch (WebServiceException ^ webEx)
+	{
+		Globals::LastError = webEx;
+		return (int)EErrorCodes::GeneralError;
+	}
+	catch (Exception ^ ex)
+	{
+		Globals::LastError = ex;
+		return (int)EErrorCodes::GeneralError;
+	}
 	return 0;
 }
 
