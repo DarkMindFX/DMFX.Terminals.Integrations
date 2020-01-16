@@ -68,6 +68,7 @@ ref class Globals
 {
 public:
 	static JsonServiceClient^ Client = nullptr;
+	static String^ AccountKey = nullptr;
 	static String^ SessionToken = nullptr;
 	static Dictionary<String^, IndicatorData^>^ Indicators = nullptr;
 	static int UpdateFrequency = 1; // update frequency in minutes
@@ -94,25 +95,31 @@ MT4ACCESS int DMFXAccountsInitSession(MqlString host, MqlString accountKey, MqlS
 		String^ sKey = ToManagedString(accountKey);
 		String^ sFolder = ToManagedString(folder);
 
-		Globals::Client = gcnew JsonServiceClient(sHost);
+		if (Globals::Client == nullptr)
+		{
+			Globals::Client = gcnew JsonServiceClient(sHost);
+		}
 
 		// Init
-		
-		DTO::InitSession^ reqInit = gcnew DTO::InitSession();
-		reqInit->RequestID = Guid::NewGuid().ToString();
-		reqInit->AccountKey = sKey;
-
-		DTO::InitSessionResponse^ resInit = Post<DTO::InitSessionResponse>("/api/accounts/InitSession", reqInit);
-
-		if (resInit != nullptr && resInit->Success)
+		if (Globals::SessionToken == nullptr || !sKey->Equals(Globals::AccountKey))
 		{
-			Globals::SessionToken = resInit->SessionToken;
-			Globals::Indicators = gcnew Dictionary<String^, IndicatorData^>();
+			DTO::InitSession^ reqInit = gcnew DTO::InitSession();
+			reqInit->RequestID = Guid::NewGuid().ToString();
+			reqInit->AccountKey = sKey;
 
-		}
-		else
-		{
-			return (int)resInit->Errors[0]->Code;
+			DTO::InitSessionResponse^ resInit = Post<DTO::InitSessionResponse>("/api/accounts/InitSession", reqInit);
+
+			if (resInit != nullptr && resInit->Success)
+			{
+				Globals::AccountKey = sKey;
+				Globals::SessionToken = resInit->SessionToken;
+				Globals::Indicators = gcnew Dictionary<String^, IndicatorData^>();
+
+			}
+			else
+			{
+				return (int)resInit->Errors[0]->Code;
+			}
 		}
 		
 		return (int)EErrorCodes::Success;

@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMFX.MT4Setup", "Setups\DMF
 		{F324CECC-6883-4E0B-A900-6AE29A7D2EA0} = {F324CECC-6883-4E0B-A900-6AE29A7D2EA0}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMFX.DarkMindConnect", "DMFX.DarkMindConnect\DMFX.DarkMindConnect.csproj", "{9550E9D7-6351-4298-A783-DF41F58FB1EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +108,18 @@ Global
 		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|x64.Build.0 = Release|Any CPU
 		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|x86.ActiveCfg = Release|x86
 		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF}.Release|x86.Build.0 = Release|x86
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Debug|x64.Build.0 = Debug|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Release|x64.ActiveCfg = Release|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Release|x64.Build.0 = Release|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
