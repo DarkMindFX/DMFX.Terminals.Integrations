@@ -1,4 +1,10 @@
-﻿using DMFX.Interfaces;
+﻿/*
+using DMFX.Interfaces;
+using DMFX.QuotesInterfaces;
+using DMFX.Service.DTO;
+using ServiceStack.ServiceClient.Web;
+*/
+using DMFX.Interfaces;
 using DMFX.QuotesInterfaces;
 using DMFX.Service.DTO;
 using ServiceStack.ServiceClient.Web;
@@ -12,11 +18,13 @@ namespace DMFX.DarkMindConnect
 {
     public class DMFXClient
     {
+        
         private string Host = null;
         private string AccountKey = null;
         private string SessionToken = null;
         private JsonServiceClient Client = null;
         private Dictionary<string, IndicatorData> Indicators = null;
+        private Exception _lastError = null;
 
         public EErrorCodes InitSession(string host, string accountKey)
         {
@@ -57,6 +65,7 @@ namespace DMFX.DarkMindConnect
             }
             catch (Exception ex)
             {
+                _lastError = ex;
                 result = EErrorCodes.GeneralError;
             }
 
@@ -94,7 +103,7 @@ namespace DMFX.DarkMindConnect
             }
             catch (Exception ex)
             {
-
+                _lastError = ex;
                 result = EErrorCodes.GeneralError;
             }
 
@@ -107,7 +116,7 @@ namespace DMFX.DarkMindConnect
 
             try
             {
-                if(Client != null && SessionToken != null)
+                if (Client != null && SessionToken != null)
                 {
                     GetTimeSeriesInfo reqGetTSInfo = new GetTimeSeriesInfo();
                     reqGetTSInfo.SessionToken = SessionToken;
@@ -115,10 +124,10 @@ namespace DMFX.DarkMindConnect
                     reqGetTSInfo.CountryCode = country;
 
                     GetTimeSeriesInfoResponse resGetTSInfo = Post<GetTimeSeriesInfo, GetTimeSeriesInfoResponse>("/api/timeseries/GetTimeSeriesInfo", reqGetTSInfo);
-                    if(resGetTSInfo.Success)
+                    if (resGetTSInfo.Success)
                     {
                         IndicatorData indData = null;
-                        if(!Indicators.TryGetValue(ticker, out indData))
+                        if (!Indicators.TryGetValue(ticker, out indData))
                         {
                             indData = new IndicatorData();
                             indData.Name = resGetTSInfo.Payload.Name;
@@ -140,10 +149,11 @@ namespace DMFX.DarkMindConnect
                     return EErrorCodes.SessionClosed;
                 }
 
-            
+
             }
             catch (Exception ex)
             {
+                _lastError = ex;
                 result = EErrorCodes.GeneralError;
             }
 
@@ -156,11 +166,12 @@ namespace DMFX.DarkMindConnect
 
             try
             {
-                if(SessionToken != null)
+                if (SessionToken != null)
                 {
                     GetTimeSeries reqGetTs = new GetTimeSeries();
                     reqGetTs.Ticker = ticker;
                     reqGetTs.CountryCode = country;
+                    reqGetTs.SessionToken = SessionToken;
                     reqGetTs.PeriodStart = periodStart != DateTime.MinValue ? periodStart : DateTime.Parse("01/01/1970");
                     reqGetTs.PeriodEnd = periodEnd != DateTime.MinValue ? periodEnd : DateTime.Now;
                     reqGetTs.TimeFrame = timeframe;
@@ -174,11 +185,11 @@ namespace DMFX.DarkMindConnect
                         {
                             for (int i = 0; i < resGetTs.Payload.Values.Quotes.Count; ++i)
                             {
-                                QuoteRecord  rec = resGetTs.Payload.Values.Quotes[i];
+                                QuoteRecord rec = resGetTs.Payload.Values.Quotes[i];
                                 for (int v = 0; v < rec.Values.Count; ++v)
                                 {
-                                    String  sTsName = indData.SeriesNames[v];
-                                    IndicatorSeriesData  indTsData = null;
+                                    String sTsName = indData.SeriesNames[v];
+                                    IndicatorSeriesData indTsData = null;
                                     if (indData.Series.TryGetValue(sTsName, out indTsData))
                                     {
                                         indTsData.Values.Add(
@@ -188,26 +199,39 @@ namespace DMFX.DarkMindConnect
                                     }
                                 }
                             }
+
+                            result = EErrorCodes.Success;
+                        }
+                        else
+                        {
+                            result = EErrorCodes.TickerNotFound;
                         }
                     }
                     else
                     {
+                        _lastError = new Exception(resGetTs.Errors[0].Message);
                         result = resGetTs.Errors[0].Code;
                     }
                 }
                 else
-                {
+                {                    
                     return EErrorCodes.SessionClosed;
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                _lastError = ex;
                 result = EErrorCodes.GeneralError;
             }
 
             return result;
 
+        }
+
+        public Exception GetLastError()
+        {
+            return _lastError;
         }
 
         public IList<string> GetColumns(string ticker)
@@ -216,7 +240,7 @@ namespace DMFX.DarkMindConnect
             IndicatorData indData = null;
             if (Indicators.TryGetValue(ticker, out indData))
             {
-                columns = new List<string>( indData.Series.Keys );
+                columns = new List<string>(indData.Series.Keys);
             }
 
             return columns;
@@ -235,40 +259,33 @@ namespace DMFX.DarkMindConnect
             return values;
         }
 
-        public int GetDateIndex(string ticker, string timeseries, DateTime dt)
+        public decimal GetDateValue(string ticker, string timeseries, DateTime dt)
         {
-            
-            int index = -1;
+            decimal result = Decimal.MinValue;
 
             IndicatorData indData = null;
             IndicatorSeriesData indSeriesData = null;
             if (Indicators.TryGetValue(ticker, out indData) && indData.Series.TryGetValue(timeseries, out indSeriesData))
             {
-                List<DateTime> dateTimeValues = new List<DateTime>(indSeriesData.Values.Keys.OrderBy( x => x ));
-                int size = dateTimeValues.Count;
-
-                for (int i = 0; i < size && index == -1; ++i)
+                DateTime k = indSeriesData.Values.Keys.LastOrDefault(x => x <= dt);
+                if (k != DateTime.MinValue)
                 {
-
-                    if (dateTimeValues[i] <= dt && (i + 1 >= size || dt < dateTimeValues[i + 1]))
-                    {
-                        index = i;
-                    }
+                    result = indSeriesData.Values[k];
                 }
             }
 
-            return index;
+            return result;
         }
 
+        
         #region Support methods
         TResponse Post<TRequest, TResponse>(string method, TRequest request)
         {
-            System.Threading.Thread.Sleep(1000);
-
             TResponse response = Client.Post<TResponse>(method, request);
 
             return response;
         }
         #endregion
+        
     }
 }
