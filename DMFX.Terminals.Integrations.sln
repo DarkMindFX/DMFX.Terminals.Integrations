@@ -15,9 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MT4Indicators", "MT4Indicat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "COT", "COT", "{CFC97069-444B-4625-A53F-96E193EBF583}"
 	ProjectSection(SolutionItems) = preProject
+		MT4Indicators\COT\COTCmdtsFutNetPositions.ex4 = MT4Indicators\COT\COTCmdtsFutNetPositions.ex4
 		MT4Indicators\COT\COTCmdtsFutNetPositions.mq4 = MT4Indicators\COT\COTCmdtsFutNetPositions.mq4
+		MT4Indicators\COT\COTCmdtsFutOptNetPositions.ex4 = MT4Indicators\COT\COTCmdtsFutOptNetPositions.ex4
 		MT4Indicators\COT\COTCmdtsFutOptNetPositions.mq4 = MT4Indicators\COT\COTCmdtsFutOptNetPositions.mq4
+		MT4Indicators\COT\COTFinFutNetPositions.ex4 = MT4Indicators\COT\COTFinFutNetPositions.ex4
 		MT4Indicators\COT\COTFinFutNetPositions.mq4 = MT4Indicators\COT\COTFinFutNetPositions.mq4
+		MT4Indicators\COT\COTFinFutOptNetPositions.ex4 = MT4Indicators\COT\COTFinFutOptNetPositions.ex4
 		MT4Indicators\COT\COTFinFutOptNetPositions.mq4 = MT4Indicators\COT\COTFinFutOptNetPositions.mq4
 	EndProjectSection
 EndProject
@@ -51,6 +55,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMFX.Test.Console", "Tests\DMFX.Test.Console\DMFX.Test.Console.csproj", "{F00BF6CF-194E-4872-9818-75BA9462BED3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NT8Indicators", "NT8Indicators", "{397B67FB-7814-4E51-A70A-E77596A162B3}"
+	ProjectSection(SolutionItems) = preProject
+		NT8Indicators\DMFX.COT.CommoditiesFutures.NetPositions.algo = NT8Indicators\DMFX.COT.CommoditiesFutures.NetPositions.algo
+		NT8Indicators\DMFX.COT.CommoditiesFuturesOptions.NetPositions.algo = NT8Indicators\DMFX.COT.CommoditiesFuturesOptions.NetPositions.algo
+		NT8Indicators\DMFX.COT.FinFutures.NetPositions.algo = NT8Indicators\DMFX.COT.FinFutures.NetPositions.algo
+		NT8Indicators\DMFX.COT.FinFuturesOptions.NetPositions.algo = NT8Indicators\DMFX.COT.FinFuturesOptions.NetPositions.algo
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

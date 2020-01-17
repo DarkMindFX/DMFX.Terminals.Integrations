@@ -98,311 +98,311 @@ namespace DMFX
             string[,] values = new string[,] 
             {
                 {
-                    "COT.FinFut.090741.Net",
+                    "COT.FinFutOpt.090741.Net",
                     "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.092741.Net",
+                    "COT.FinFutOpt.092741.Net",
                     "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.096742.Net",
+                    "COT.FinFutOpt.096742.Net",
                     "BRITISH POUND STERLING - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.097741.Net",
+                    "COT.FinFutOpt.097741.Net",
                     "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.099741.Net",
+                    "COT.FinFutOpt.099741.Net",
                     "EURO FX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.232741.Net",
+                    "COT.FinFutOpt.232741.Net",
                     "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.299741.Net",
+                    "COT.FinFutOpt.299741.Net",
                     "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.399741.Net",
+                    "COT.FinFutOpt.399741.Net",
                     "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.089741.Net",
+                    "COT.FinFutOpt.089741.Net",
                     "RUSSIAN RUBLE - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.095741.Net",
+                    "COT.FinFutOpt.095741.Net",
                     "MEXICAN PESO - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.102741.Net",
+                    "COT.FinFutOpt.102741.Net",
                     "BRAZILIAN REAL - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.112741.Net",
+                    "COT.FinFutOpt.112741.Net",
                     "NEW ZEALAND DOLLAR - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.122741.Net",
+                    "COT.FinFutOpt.122741.Net",
                     "SOUTH AFRICAN RAND - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.12460+.Net",
+                    "COT.FinFutOpt.12460+.Net",
                     "DJIA Consolidated - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.124603.Net",
+                    "COT.FinFutOpt.124603.Net",
                     "DOW JONES INDUSTRIAL AVG- x $5 - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.124606.Net",
+                    "COT.FinFutOpt.124606.Net",
                     "DOW JONES U.S. REAL ESTATE IDX - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874+.Net",
+                    "COT.FinFutOpt.13874+.Net",
                     "S&P 500 Consolidated - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.138741.Net",
+                    "COT.FinFutOpt.138741.Net",
                     "S&P 500 STOCK INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.138748.Net",
+                    "COT.FinFutOpt.138748.Net",
                     "E-MINI S&P CONSU STAPLES INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.138749.Net",
+                    "COT.FinFutOpt.138749.Net",
                     "E-MINI S&P ENERGY INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874A.Net",
+                    "COT.FinFutOpt.13874A.Net",
                     "E-MINI S&P 500 STOCK INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874C.Net",
+                    "COT.FinFutOpt.13874C.Net",
                     "E-MINI S&P FINANCIAL INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874E.Net",
+                    "COT.FinFutOpt.13874E.Net",
                     "E-MINI S&P HEALTH CARE INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874F.Net",
+                    "COT.FinFutOpt.13874F.Net",
                     "E-MINI S&P INDUSTRIAL INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874H.Net",
+                    "COT.FinFutOpt.13874H.Net",
                     "E-MINI S&P MATERIALS INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874I.Net",
+                    "COT.FinFutOpt.13874I.Net",
                     "E-MINI S&P TECHNOLOGY INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874J.Net",
+                    "COT.FinFutOpt.13874J.Net",
                     "E-MINI S&P UTILITIES INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.13874N.Net",
+                    "COT.FinFutOpt.13874N.Net",
                     "S&P 500 TOTAL RETURN INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.20974+.Net",
+                    "COT.FinFutOpt.20974+.Net",
                     "NASDAQ-100 Consolidated - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.209742.Net",
+                    "COT.FinFutOpt.209742.Net",
                     "NASDAQ-100 STOCK INDEX (MINI) - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.239742.Net",
+                    "COT.FinFutOpt.239742.Net",
                     "E-MINI RUSSELL 2000 INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.240741.Net",
+                    "COT.FinFutOpt.240741.Net",
                     "NIKKEI STOCK AVERAGE - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.240743.Net",
+                    "COT.FinFutOpt.240743.Net",
                     "NIKKEI STOCK AVERAGE YEN DENOM - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.244041.Net",
+                    "COT.FinFutOpt.244041.Net",
                     "MSCI EAFE MINI INDEX - ICE FUTURES U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.244042.Net",
+                    "COT.FinFutOpt.244042.Net",
                     "MSCI EMERGING MKTS MINI INDEX - ICE FUTURES U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.33874A.Net",
+                    "COT.FinFutOpt.33874A.Net",
                     "E-MINI S&P 400 STOCK INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.43874A.Net",
+                    "COT.FinFutOpt.43874A.Net",
                     "S&P 500 ANNUAL DIVIDEND INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.020601.Net",
+                    "COT.FinFutOpt.020601.Net",
                     "U.S. TREASURY BONDS - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.020604.Net",
+                    "COT.FinFutOpt.020604.Net",
                     "ULTRA U.S. TREASURY BONDS - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.042601.Net",
+                    "COT.FinFutOpt.042601.Net",
                     "2-YEAR U.S. TREASURY NOTES - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.043602.Net",
+                    "COT.FinFutOpt.043602.Net",
                     "10-YEAR U.S. TREASURY NOTES - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.043607.Net",
+                    "COT.FinFutOpt.043607.Net",
                     "ULTRA 10-YEAR U.S. T-NOTES - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.044601.Net",
+                    "COT.FinFutOpt.044601.Net",
                     "5-YEAR U.S. TREASURY NOTES - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.045601.Net",
+                    "COT.FinFutOpt.045601.Net",
                     "30-DAY FEDERAL FUNDS - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.132741.Net",
+                    "COT.FinFutOpt.132741.Net",
                     "3-MONTH EURODOLLARS - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.134741.Net",
+                    "COT.FinFutOpt.134741.Net",
                     "3-MONTH SOFR - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.134742.Net",
+                    "COT.FinFutOpt.134742.Net",
                     "1-MONTH SOFR - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.246605.Net",
+                    "COT.FinFutOpt.246605.Net",
                     "10 YEAR DELIVERABLE IR - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.246606.Net",
+                    "COT.FinFutOpt.246606.Net",
                     "5 YEAR DELIVERABLE IR - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.343601.Net",
+                    "COT.FinFutOpt.343601.Net",
                     "10 YEAR ERIS SWAP  - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.344601.Net",
+                    "COT.FinFutOpt.344601.Net",
                     "5 YEAR ERIS SWAP - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.1330E1.Net",
+                    "COT.FinFutOpt.1330E1.Net",
                     "BITCOIN-USD - CBOE FUTURES EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.133741.Net",
+                    "COT.FinFutOpt.133741.Net",
                     "BITCOIN - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.098662.Net",
+                    "COT.FinFutOpt.098662.Net",
                     "U.S. DOLLAR INDEX - ICE FUTURES U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.1170E1.Net",
+                    "COT.FinFutOpt.1170E1.Net",
                     "VIX FUTURES - CBOE FUTURES EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.221602.Net",
+                    "COT.FinFutOpt.221602.Net",
                     "BLOOMBERG COMMODITY INDEX - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.138747.Net",
+                    "COT.FinFutOpt.138747.Net",
                     "E-MINI S&P CONSUMER DISC INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.239744.Net",
+                    "COT.FinFutOpt.239744.Net",
                     "EMINI RUSSELL 1000 VALUE INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.23977A.Net",
+                    "COT.FinFutOpt.23977A.Net",
                     "RUSSELL 2000 MINI INDEX FUTURE - ICE FUTURES U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.ZB9105.Net",
+                    "COT.FinFutOpt.ZB9105.Net",
                     "5-Year Eris Standard- Initial - ERIS FUTURES EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.23977C.Net",
+                    "COT.FinFutOpt.23977C.Net",
                     "RUSSELL 1000 VALUE INDEX MINI - ICE FUTURES U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.256741.Net",
+                    "COT.FinFutOpt.256741.Net",
                     "S&P GSCI COMMODITY INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.299661.Net",
+                    "COT.FinFutOpt.299661.Net",
                     "EURO FX/JAPANESE YEN - SMALL - ICE FUTURES U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.599661.Net",
+                    "COT.FinFutOpt.599661.Net",
                     "EURO FX/BRITISH POUND - SMALL - ICE FUTURES U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.124601.Net",
+                    "COT.FinFutOpt.124601.Net",
                     "DOW JONES INDUSTRIAL AVERAGE - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.209741.Net",
+                    "COT.FinFutOpt.209741.Net",
                     "NASDAQ-100 STOCK INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.239741.Net",
+                    "COT.FinFutOpt.239741.Net",
                     "Russell 2000 Stock Index Future - Chicago Mercantile Exchange (Net Positions)"
                 },
                 {
-                    "COT.FinFut.239772.Net",
+                    "COT.FinFutOpt.239772.Net",
                     "RUSSEL 1000 MINI INDEX FUTURE - ICE FUTURES U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.239777.Net",
+                    "COT.FinFutOpt.239777.Net",
                     "Russell 2000 Stock Index - ICE Futures U.S. (Net Positions)"
                 },
                 {
-                    "COT.FinFut.244741.Net",
+                    "COT.FinFutOpt.244741.Net",
                     "E-MINI MSCI EAFE - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.244742.Net",
+                    "COT.FinFutOpt.244742.Net",
                     "E-MINI MSCI EMERGING MARKETS - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.338741.Net",
+                    "COT.FinFutOpt.338741.Net",
                     "S&P 400 MIDCAP STOCK INDEX - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.045L2T.Net",
+                    "COT.FinFutOpt.045L2T.Net",
                     "DTCC Repo-US Treasury <30 YR - NYSE LIFFE - NYPC (Net Positions)"
                 },
                 {
-                    "COT.FinFut.032741.Net",
+                    "COT.FinFutOpt.032741.Net",
                     "ONE-MONTH EURODOLLAR - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.246602.Net",
+                    "COT.FinFutOpt.246602.Net",
                     "INTEREST RATE SWAPS 10YR - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.247602.Net",
+                    "COT.FinFutOpt.247602.Net",
                     "INTEREST RATE SWAPS 5YR - CHICAGO BOARD OF TRADE (Net Positions)"
                 },
                 {
-                    "COT.FinFut.597741.Net",
+                    "COT.FinFutOpt.597741.Net",
                     "3-MO. EUROYEN TIBOR - CHICAGO MERCANTILE EXCHANGE (Net Positions)"
                 }
             };
@@ -415,7 +415,7 @@ namespace DMFX
 namespace cAlgo
 {
     [Indicator(IsOverlay = false, TimeZone = TimeZones.UTC, AccessRights = AccessRights.FullAccess)]
-    public class DMFXCOTFinFuturesNetPositions : Indicator
+    public class DMFXCOTFinFuturesOptionsNetPositions : Indicator
     {
         [Parameter(DefaultValue = "C4456411C83EAC70BCDD6F9386DFD1800581685D")]
         public string AccountKey { get; set; }
