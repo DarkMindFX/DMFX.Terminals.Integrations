@@ -21,7 +21,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -69,8 +69,8 @@
       <AdditionalOptions>/IMPLIB:DarkMindConnect.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y $(TargetDir)DarkMindConnect.dll "C:\Users\zr_co\AppData\Roaming\MetaQuotes\Terminal\1FC724C8C211BFE8ECF8B599A855301E\MQL4\Indicators\DarkMindFx\DarkMindConnect.dll"
-xcopy /y $(TargetDir)*.dll $(TargetDir)..\..\Tests\DMFX.Test.DarkMindConnect\Debug\</Command>
+      <Command>rem xcopy /y $(TargetDir)DarkMindConnect.dll "C:\Users\zr_co\AppData\Roaming\MetaQuotes\Terminal\1FC724C8C211BFE8ECF8B599A855301E\MQL4\Indicators\DarkMindFx\DarkMindConnect.dll"
+rem xcopy /y $(TargetDir)*.dll $(TargetDir)..\..\Tests\DMFX.Test.DarkMindConnect\Debug\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -88,7 +88,7 @@ xcopy /y $(TargetDir)*.dll $(TargetDir)..\..\Tests\DMFX.Test.DarkMindConnect\Deb
       <AdditionalLibraryDirectories>c:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y $(TargetDir)DarkMindConnect.dll "C:\Users\zr_co\AppData\Roaming\MetaQuotes\Terminal\1FC724C8C211BFE8ECF8B599A855301E\MQL4\Indicators\DarkMindFx\DarkMindConnect.dll"</Command>
+      <Command>rem xcopy /y $(TargetDir)DarkMindConnect.dll "C:\Users\zr_co\AppData\Roaming\MetaQuotes\Terminal\1FC724C8C211BFE8ECF8B599A855301E\MQL4\Indicators\DarkMindFx\DarkMindConnect.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

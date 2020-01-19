@@ -172,12 +172,12 @@ namespace DMFX.MT4Setup.Model
             Progress = 90;
 
             // copying indicators
-            var fldIndicators = Path.Combine(indicatorsFolder, "MT4Package\\.indicators\\DarkMindFx");
+            var fldIndicators = Path.Combine(indicatorsFolder, "Package.MT4\\.indicators\\DarkMindFx");
 
             Directory.Move(fldIndicators, Path.Combine(indicatorsFolder, "DarkMindFx"));
 
             // copying all .dlls files except
-            var fldDlls = Directory.EnumerateFiles(Path.Combine(indicatorsFolder, "MT4Package\\.dlls"));
+            var fldDlls = Directory.EnumerateFiles(Path.Combine(indicatorsFolder, "Package.MT4\\.dlls"));
             foreach (var file in fldDlls)
             {
                 string dstFile = Path.Combine(installDir, Path.GetFileName(file));
@@ -188,7 +188,7 @@ namespace DMFX.MT4Setup.Model
                 File.Move(file, dstFile);
             }
 
-            Directory.Delete(Path.Combine(indicatorsFolder, "MT4Package"), true);
+            Directory.Delete(Path.Combine(indicatorsFolder, "Package.MT4"), true);
 
 
             Progress = 100;

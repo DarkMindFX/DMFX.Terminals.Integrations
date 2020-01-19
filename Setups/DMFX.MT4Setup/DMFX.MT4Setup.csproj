@@ -14,6 +14,21 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -177,6 +192,13 @@
     <Content Include="Resources\msvcp110.dll" />
     <Content Include="Resources\msvcr110.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterResolveReferences">
     <ItemGroup>
@@ -189,14 +211,14 @@
     <PostBuildEvent>xcopy /y "$(TargetPath)" "$(ProjectDir)Setup"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>xcopy /y "$(ProjectDir)..\..\DMFX.DTO\bin\DMFX.DTO.dll" "$(ProjectDir)..\MT4Package\.dlls\"
-xcopy /y "$(ProjectDir)Resources\msvcp110.dll" "$(ProjectDir)..\MT4Package\.dlls\"
-xcopy /y "$(ProjectDir)Resources\msvcr110.dll" "$(ProjectDir)..\MT4Package\.dlls\"
-xcopy /y "$(ProjectDir)..\..\ServiceStack\*.dll" "$(ProjectDir)..\MT4Package\.dlls\"
-xcopy /y "$(ProjectDir)..\..\DarkMindConnect\bin\DarkMindConnect.dll" "$(ProjectDir)..\MT4Package\.indicators\DarkMindFx\"
-xcopy /y "$(ProjectDir)..\..\MT4Indicators\COT\*.ex4" "$(ProjectDir)..\MT4Package\.indicators\DarkMindFx\COT\"
+    <PreBuildEvent>xcopy /y "$(ProjectDir)..\..\DMFX.DTO\bin\DMFX.DTO.dll" "$(ProjectDir)..\Package.MT4\.dlls\"
+xcopy /y "$(ProjectDir)Resources\msvcp110.dll" "$(ProjectDir)..\Package.MT4\.dlls\"
+xcopy /y "$(ProjectDir)Resources\msvcr110.dll" "$(ProjectDir)..\Package.MT4\.dlls\"
+xcopy /y "$(ProjectDir)..\..\ServiceStack\*.dll" "$(ProjectDir)..\Package.MT4\.dlls\"
+xcopy /y "$(ProjectDir)..\..\DarkMindConnect\bin\DarkMindConnect.dll" "$(ProjectDir)..\Package.MT4\.indicators\DarkMindFx\"
+xcopy /y "$(ProjectDir)..\..\MT4Indicators\COT\*.ex4" "$(ProjectDir)..\Package.MT4\.indicators\DarkMindFx\COT\"
 
-7z  a -tzip "$(ProjectDir)Resources\MetaTrader4.zip" "$(ProjectDir)..\MT4Package\"</PreBuildEvent>
+7z  a -tzip "$(ProjectDir)Resources\MetaTrader4.zip" "$(ProjectDir)..\Package.MT4\"</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

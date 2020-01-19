@@ -80,7 +80,7 @@ namespace DMFX.cTraderSetup.Model
             }
 
             // extracting zip
-            byte[] zipBytes = DMFX.cTraderSetup.Properties.Resources.cTrader_274570A67AD55CE71EB0627146FC8CC772E5EDC6;
+            byte[] zipBytes = DMFX.cTraderSetup.Properties.Resources.cTrader;
             MemoryStream ms = new MemoryStream(zipBytes);
 
             using (ZipFile zip = ZipFile.Read(ms))
@@ -91,21 +91,44 @@ namespace DMFX.cTraderSetup.Model
 
             Progress = 99;
 
-            // copying all dll files 
-            var enumFiles = Directory.EnumerateFiles(indicatorsFolder);
-            foreach (var file in enumFiles)
-            {
-                if (Path.GetExtension(file) == ".dll")
-                {
-                    string dstFile = Path.Combine(_cAlgoPath, Path.GetFileName(file));
-                    if (File.Exists(dstFile))
-                    {
-                        File.Delete(dstFile);
-                    }
-                    File.Move(file, dstFile);
+            string packageFolder = Path.Combine(indicatorsFolder, "Package.cTrader");
 
+            // copying indicators
+            var fldIndicators = Path.Combine(packageFolder, ".indicators");
+
+            var inds = Directory.EnumerateFiles(fldIndicators);
+            foreach(var f in inds)
+            {
+                string dstPath = Path.Combine(indicatorsFolder, Path.GetFileName(f));
+                if(File.Exists(dstPath))
+                {
+                    File.Delete(dstPath);
                 }
+                File.Move(f, dstPath);
             }
+
+            var dmfxFolder = Path.Combine(indicatorsFolder, "Package.cTrader\\.dlls\\DarkMindFx");
+            var dstDmfxFolder = Path.Combine(_cAlgoPath, "DarkMindFx");
+            if(Directory.Exists(dstDmfxFolder))
+            {
+                Directory.Delete(dstDmfxFolder, true);
+            }
+
+            Directory.Move(dmfxFolder, dstDmfxFolder);
+
+            // copying all .dlls files except
+            var fldDlls = Directory.EnumerateFiles(Path.Combine(indicatorsFolder, "Package.cTrader\\.dlls"));
+            foreach (var file in fldDlls)
+            {
+                string dstFile = Path.Combine(_cAlgoPath, Path.GetFileName(file));
+                if (File.Exists(dstFile))
+                {
+                    File.Delete(dstFile);
+                }
+                File.Move(file, dstFile);
+            }
+            
+            Directory.Delete(packageFolder, true);
 
             Progress = 100;
 

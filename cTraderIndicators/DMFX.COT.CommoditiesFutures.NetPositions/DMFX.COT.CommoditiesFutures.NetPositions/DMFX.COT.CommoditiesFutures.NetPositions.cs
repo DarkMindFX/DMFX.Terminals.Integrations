@@ -2440,7 +2440,7 @@ namespace cAlgo
     [Indicator(IsOverlay = false, TimeZone = TimeZones.UTC, AccessRights = AccessRights.FullAccess)]
     public class DMFXCOTCmdtsFuturesNetPositions : Indicator
     {
-        [Parameter(DefaultValue = "C4456411C83EAC70BCDD6F9386DFD1800581685D")]
+        [Parameter(DefaultValue = "[Your Account Key]")]
         public string AccountKey { get; set; }
 
         [Parameter(DefaultValue = DMFX.Constants.ECOTCmdtsCodes.CRUDE_OIL_LIGHT_SWEET_WTI___ICE_FUTURES_EUROPE_Net_Positions)]

@@ -19,7 +19,7 @@ namespace DMFX.cTraderSetup.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -72,9 +72,9 @@ namespace DMFX.cTraderSetup.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] cTrader_274570A67AD55CE71EB0627146FC8CC772E5EDC6 {
+        internal static byte[] cTrader {
             get {
-                object obj = ResourceManager.GetObject("cTrader_274570A67AD55CE71EB0627146FC8CC772E5EDC6", resourceCulture);
+                object obj = ResourceManager.GetObject("cTrader", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -148,7 +148,7 @@ namespace DMFX.cTraderSetup.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2017.11.20.
+        ///   Looks up a localized string similar to 2020.01.20.
         /// </summary>
         internal static string Version {
             get {

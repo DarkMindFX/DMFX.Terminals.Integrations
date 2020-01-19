@@ -54,12 +54,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMFX.NinjaTrader8", "DMFX.N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMFX.Test.Console", "Tests\DMFX.Test.Console\DMFX.Test.Console.csproj", "{F00BF6CF-194E-4872-9818-75BA9462BED3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NT8Indicators", "NT8Indicators", "{397B67FB-7814-4E51-A70A-E77596A162B3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cTraderIndicators", "cTraderIndicators", "{397B67FB-7814-4E51-A70A-E77596A162B3}"
 	ProjectSection(SolutionItems) = preProject
-		NT8Indicators\DMFX.COT.CommoditiesFutures.NetPositions.algo = NT8Indicators\DMFX.COT.CommoditiesFutures.NetPositions.algo
-		NT8Indicators\DMFX.COT.CommoditiesFuturesOptions.NetPositions.algo = NT8Indicators\DMFX.COT.CommoditiesFuturesOptions.NetPositions.algo
-		NT8Indicators\DMFX.COT.FinFutures.NetPositions.algo = NT8Indicators\DMFX.COT.FinFutures.NetPositions.algo
-		NT8Indicators\DMFX.COT.FinFuturesOptions.NetPositions.algo = NT8Indicators\DMFX.COT.FinFuturesOptions.NetPositions.algo
+		cTraderIndicators\DMFX.COT.CommoditiesFutures.NetPositions.algo = cTraderIndicators\DMFX.COT.CommoditiesFutures.NetPositions.algo
+		cTraderIndicators\DMFX.COT.CommoditiesFuturesOptions.NetPositions.algo = cTraderIndicators\DMFX.COT.CommoditiesFuturesOptions.NetPositions.algo
+		cTraderIndicators\DMFX.COT.FinFutures.NetPositions.algo = cTraderIndicators\DMFX.COT.FinFutures.NetPositions.algo
+		cTraderIndicators\DMFX.COT.FinFuturesOptions.NetPositions.algo = cTraderIndicators\DMFX.COT.FinFuturesOptions.NetPositions.algo
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMFX.cTraderSetup", "Setups\DMFX.cTraderSetup\DMFX.cTraderSetup.csproj", "{7C2CE8B6-20AD-4BCC-BE03-E19780556495}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9550E9D7-6351-4298-A783-DF41F58FB1EA} = {9550E9D7-6351-4298-A783-DF41F58FB1EA}
 	EndProjectSection
 EndProject
 Global
@@ -174,6 +179,18 @@ Global
 		{F00BF6CF-194E-4872-9818-75BA9462BED3}.Release|x64.Build.0 = Release|Any CPU
 		{F00BF6CF-194E-4872-9818-75BA9462BED3}.Release|x86.ActiveCfg = Release|Any CPU
 		{F00BF6CF-194E-4872-9818-75BA9462BED3}.Release|x86.Build.0 = Release|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Debug|x64.Build.0 = Debug|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Debug|x86.Build.0 = Debug|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Release|x64.ActiveCfg = Release|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Release|x64.Build.0 = Release|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -185,6 +202,7 @@ Global
 		{D6E3FA15-42D5-4B59-BEAE-B45BF68300FF} = {ACE94EED-B25B-4DAA-9683-8CBB040D3894}
 		{9EE18A78-387E-4166-A9DD-CAAECD35C9BF} = {8F5B09CA-21E3-48E9-A8F3-72539ED73C14}
 		{F00BF6CF-194E-4872-9818-75BA9462BED3} = {8F5B09CA-21E3-48E9-A8F3-72539ED73C14}
+		{7C2CE8B6-20AD-4BCC-BE03-E19780556495} = {ACE94EED-B25B-4DAA-9683-8CBB040D3894}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20DCED67-B629-45CA-8881-D90DB8492DB6}

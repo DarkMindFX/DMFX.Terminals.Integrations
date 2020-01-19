@@ -40,9 +40,8 @@
     <ApplicationIcon>brain_256.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -98,6 +97,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
@@ -106,7 +106,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Resources\cTrader-274570A67AD55CE71EB0627146FC8CC772E5EDC6.zip" />
+    <None Include="Resources\cTrader.zip" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -118,7 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DMFX.cTrader.License.txt" />
-    <EmbeddedResource Include="Resources\DotNetZip.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Setup\" />
@@ -136,6 +135,16 @@
   </Target>
   <PropertyGroup>
     <PostBuildEvent>xcopy /y "$(TargetPath)" "$(ProjectDir)Setup"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy /y "$(ProjectDir)..\..\DMFX.DarkMindConnect\bin\DMFX.DarkMindConnect.dll" "$(ProjectDir)..\Package.cTrader\.dlls\DarkMindFx\"
+xcopy /y "$(ProjectDir)..\..\DMFX.DarkMindConnect\bin\DMFX.DTO.dll" "$(ProjectDir)..\Package.cTrader\.dlls\DarkMindFx\"
+xcopy /y "$(ProjectDir)..\..\DMFX.DarkMindConnect\bin\ServiceStack.Common.dll" "$(ProjectDir)..\Package.cTrader\.dlls\"
+xcopy /y "$(ProjectDir)..\..\DMFX.DarkMindConnect\bin\ServiceStack.Interfaces.dll" "$(ProjectDir)..\Package.cTrader\.dlls\"
+xcopy /y "$(ProjectDir)..\..\DMFX.DarkMindConnect\bin\ServiceStack.Text.dll" "$(ProjectDir)..\Package.cTrader\.dlls\"
+xcopy /y "$(ProjectDir)..\..\cTraderIndicators\*.algo" "$(ProjectDir)..\Package.cTrader\.indicators\"
+
+7z  a -tzip "$(ProjectDir)Resources\cTrader.zip" "$(ProjectDir)..\Package.cTrader\"</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
