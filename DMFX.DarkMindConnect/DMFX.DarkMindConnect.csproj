@@ -68,6 +68,6 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y "$(TargetDir)*.dll" "C:\Users\zr_co\Documents\NinjaTrader 8\bin\Custom\DarkMindFx\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /y "$(TargetDir)*.dll" "C:\Users\zr_co\Documents\NinjaTrader 8\bin\Custom\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
