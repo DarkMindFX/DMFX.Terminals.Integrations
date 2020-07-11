@@ -1090,8 +1090,8 @@ namespace NinjaTrader.NinjaScript.Indicators
 					//See Help Guide for additional information.
 					IsSuspendedWhileInactive					= true;
 					
-					Host = "http://localhost/";
-					AccountKey = "Z46E6776E7FA9141FF4CF74BCBEC0DFF8B4898590";
+					Host = "http://darkmindfx.com/";
+					AccountKey = "[Your Account Key]";
 					COTCode = ECOTCmdtsCodes.CRUDE_OIL__LIGHT_SWEET_WTI___ICE_FUTURES_EUROPE__Net_Positions_;
 					WeeksBack = 500;
 					

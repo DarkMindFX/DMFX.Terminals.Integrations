@@ -148,7 +148,7 @@ namespace DMFX.MT4Setup.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2020.01.20.
+        ///   Looks up a localized string similar to 2020.02.10.
         /// </summary>
         internal static string Version {
             get {

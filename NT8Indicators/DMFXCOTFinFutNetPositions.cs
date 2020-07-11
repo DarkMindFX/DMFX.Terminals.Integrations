@@ -225,10 +225,10 @@ namespace NinjaTrader.NinjaScript.Indicators
 					//Disable this property if your indicator requires custom values that cumulate with each new market data event. 
 					//See Help Guide for additional information.
 					IsSuspendedWhileInactive					= true;
-					
-					Host = "http://localhost/";
-					AccountKey = "Z46E6776E7FA9141FF4CF74BCBEC0DFF8B4898590";
-					COTCode = ECOTFinCodes.EURO_FX__CHICAGO_MERCANTILE_EXCHANGE_Net_Positions;
+
+                    Host = "http://darkmindfx.com/";
+                    AccountKey = "[Your Account Key]";
+                    COTCode = ECOTFinCodes.EURO_FX__CHICAGO_MERCANTILE_EXCHANGE_Net_Positions;
 					WeeksBack = 500;
 					
 					AddPlot(Brushes.Red, "Dealer_Positions_Net");
